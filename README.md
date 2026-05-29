@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# 🚗 Vehicle Service Booking System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack MERN (MongoDB, Express.js, React.js, Node.js) application for booking vehicle services online. Customers can browse services, book appointments, make payments, and track their service history. Admins can manage services, view bookings, update statuses, and generate reports.
 
-## Available Scripts
+## 📸 Screenshots
 
-In the project directory, you can run:
+| Dashboard | Services | Admin Panel |
+|-----------|----------|-------------|
+| ![Dashboard](https://via.placeholder.com/400x200?text=Dashboard) | ![Services](https://via.placeholder.com/400x200?text=Services) | ![Admin](https://via.placeholder.com/400x200?text=Admin) |
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👤 User Features
+- 🔐 User registration and login with JWT authentication
+- 📅 Browse and filter services by category
+- 🛒 Add multiple services to cart
+- 📝 Book appointments with date/time selection
+- 💳 Online payment integration
+- 📋 View booking history and status
+- 🔔 Real-time notifications
+- 👤 Profile management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 👑 Admin Features
+- 📊 Interactive dashboard with charts and analytics
+- 📈 Real-time statistics (users, bookings, revenue)
+- 🔧 CRUD operations for services
+- 📅 Calendar view with booking counts
+- ✅ Update booking status (pending → confirmed → completed)
+- 💰 Mark payments as completed
+- 👥 User management (view, delete)
+- 📨 Send messages to customers
+- 📑 Generate reports and export data
+- 📱 Responsive design for all devices
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- **React.js** - UI library
+- **CSS3** - Styling with custom components
+- **React Router** - Navigation
+- **Axios** - API calls
+- **Chart.js** - Analytics charts
 
-### `npm run build`
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB** - Database
+- **Mongoose** - ODM
+- **JWT** - Authentication
+- **Bcrypt.js** - Password hashing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📁 Project Structure
+Vehicle-Service-Booking-System/
+├── backend/
+│ ├── middleware/
+│ │ └── auth.js
+│ ├── models/
+│ │ ├── Booking.js
+│ │ ├── Service.js
+│ │ └── User.js
+│ ├── routes/
+│ │ ├── auth.js
+│ │ ├── booking.js
+│ │ └── services.js
+│ ├── .env
+│ ├── package.json
+│ └── server.js
+├── frontend/
+│ ├── public/
+│ ├── src/
+│ │ ├── components/
+│ │ │ ├── AdminSidebar.jsx
+│ │ │ ├── Footer.jsx
+│ │ │ ├── HomeFooter.jsx
+│ │ │ ├── HomeTopBar.jsx
+│ │ │ └── TopBar.jsx
+│ │ ├── pages/
+│ │ │ ├── admin/
+│ │ │ │ ├── AdminBookingsPage.jsx
+│ │ │ │ ├── AdminDashboardPage.jsx
+│ │ │ │ ├── AdminMessagesPage.jsx
+│ │ │ │ ├── AdminReportsPage.jsx
+│ │ │ │ ├── AdminServicesPage.jsx
+│ │ │ │ ├── AdminSettingsPage.jsx
+│ │ │ │ └── AdminUsersPage.jsx
+│ │ │ ├── AboutUs.jsx
+│ │ │ ├── AdminDashboard.jsx
+│ │ │ ├── Booking.jsx
+│ │ │ ├── ContactUs.jsx
+│ │ │ ├── Dashboard.jsx
+│ │ │ ├── Home.jsx
+│ │ │ ├── Login.jsx
+│ │ │ ├── MultiBooking.jsx
+│ │ │ ├── MyBookings.jsx
+│ │ │ ├── Payment.jsx
+│ │ │ ├── Services.jsx
+│ │ │ └── SignUp.jsx
+│ │ ├── services/
+│ │ │ └── api.js
+│ │ ├── App.js
+│ │ └── index.js
+│ ├── package.json
+│ └── README.md
+└── .gitignore
